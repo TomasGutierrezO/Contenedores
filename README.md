@@ -1,5 +1,7 @@
 # Contenedores
 
+Instrucciones básicas:
+
 1. Para la utilización de este proyecto, se debe clonar el repositorio:
   git clone https://github.com/TomasGutierrezO/Contenedores.git
   
