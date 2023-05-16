@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro De Usuarios</title>
+    <title>Registro de Usuarios</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #F0F0F0; margin: 0; padding: 20px;">
-    <h1 style="text-align: center;">Registro</h1>
+<body>
+    <h1>Registro</h1>
 	{% if error %}
-		<p style="text-align: center; color: red;">{{ error }}</p>
+		<p class="error">{{ error }}</p>
 	{% endif %}
-	<form method="POST" action="{{ url_for('register') }}" style="text-align: center;">
-		<label style="display: block;">Nombre de usuario:</label>
-		<input type="text" name="username" style="padding: 5px; margin-bottom: 10px;"><br><br>
-		<label style="display: block;">Contraseña:</label>
-		<input type="password" name="password" style="padding: 5px; margin-bottom: 10px;"><br><br>
-		<label style="display: block;">Confirmar contraseña:</label>
-		<input type="password" name="confirm_password" style="padding: 5px; margin-bottom: 10px;"><br><br>
-		<input type="submit" value="Registrarse" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+	<form method="POST" action="{{ url_for('register') }}">
+		<label>Nombre de usuario:</label>
+		<input type="text" name="username"><br><br>
+		<label>Contraseña:</label>
+		<input type="password" name="password"><br><br>
+		<label>Confirmar contraseña:</label>
+		<input type="password" name="confirm_password"><br><br>
+		<input type="submit" value="Registrarse">
 	</form>
 </body>
 </html>
+
