@@ -22,15 +22,14 @@ fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
 
 server = Flask(__name__)
 
-VALID_PASSWORD = "270204"
+VALID_PASSWORD = "123456"
 
 @server.route('/')
 def index():
     password = request.args.get('password')
     if password == VALID_PASSWORD:
         return redirect('/dashboard')
-    else:
-        return redirect("https://www.youtube.com/watch?v=mCdA4bJAGGk")
+    
 
 
 app = dash.Dash(__name__, server=server, url_base_pathname='/dashboard/')
