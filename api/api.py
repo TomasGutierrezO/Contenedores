@@ -31,7 +31,6 @@ def index():
         return redirect('/dashboard')
     
 
-
 app = dash.Dash(__name__, server=server, url_base_pathname='/dashboard/')
 
 app.layout = html.Div([
